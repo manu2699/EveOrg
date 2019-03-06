@@ -1,15 +1,13 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>EVEORG</title>
     <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/style.css" rel="stylesheet">
-    <script src="/assets/actions.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/jquery-ui.min.css">
 </head>
 
 <body>
@@ -20,17 +18,19 @@
         <div class="topnav-right">
             <button class="btnl" id="sign" onclick="Si()">Student Login</button>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
-    </div>
-
+        </div>
     </div>
     <div id="msg">
-
     </div>
-    <input type="text" id="datepicker" class="date" placeholder="Date" readonly>
+    <input type="text" id="datepicker" />
     <div class="card-grid" id="eventsview">
-
     </div>
 </body>
-<script src="/assets/script.js"></script>
 
+<script src="/assets/script.js"></script>
+<script type="text/javascript" src="/assets/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
+<script>
+    $("#datepicker").datepicker();
+</script>
 </html>
