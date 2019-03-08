@@ -1,13 +1,19 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>EVEORG</title>
     <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+    </script>
 </head>
 
 <body>
@@ -15,22 +21,40 @@
         <a href="/" class="active">&#x1F4C5; EVEORG &#x1F38A; </a>
         <a href="/">&#x1F3E1; HOME</a>
         <a href="/college.html">HOST EVENT</a>
+        <a id="sign" onclick="Si()">STUDENT LOGIN</a>
         <div class="topnav-right">
-            <button class="btnl" id="sign" onclick="Si()">Student Login</button>
+            <div id = "hide">
+            </div>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
         </div>
     </div>
-    <div id="msg">
-    </div>
-    <input type="text" id="datepicker" />
-    <div class="card-grid" id="eventsview">
+    <br>
+    <div id="bd">
+
+        <div class="row">
+            <div class="col m3">
+                <label>Pick A Date</label>
+                <input type="date" class="datepicker" />
+            </div>
+
+            <div class="col m3">
+                <label>Pick A Date</label>
+                <select class="browser-default">
+                    <option>1</option>
+                    <option>1</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div id="msg">
+        </div>
+
+        <div class="card-grid" id="eventsview">
+        </div>
     </div>
 </body>
 
 <script src="/assets/script.js"></script>
-<script type="text/javascript" src="/assets/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="/assets/jquery-ui.min.js"></script>
-<script>
-    $("#datepicker").datepicker();
-</script>
+
 </html>

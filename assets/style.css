@@ -1,5 +1,5 @@
 body {
-  background: url('1.jpg');
+  /*background: url('1.jpg');*/
   max-height: 350px;
   font-family: 'Allerta Stencil';
   font-size: 22px;
@@ -11,6 +11,10 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+#bd {
+  padding: 20px;
 }
 
 .topnav {
@@ -94,7 +98,8 @@ body {
 @media screen and (max-width: 600px) {
 
   .topnav a:not(:first-child),
-  .dropdown .dropbtn {
+  .dropdown .dropbtn,
+  #hide {
     display: none;
   }
 
@@ -129,7 +134,8 @@ body {
     position: relative;
   }
 
-  .topnav.responsive .dropdown .dropbtn {
+  .topnav.responsive .dropdown .dropbtn,
+  #hide {
     display: block;
     width: 100%;
     text-align: left;
@@ -198,8 +204,20 @@ body {
 .btnl {
   padding: 10px;
   margin: 5px;
+  border: 0px;
+  font-family: 'Allerta Stencil';
+  font-size: 15px;
   background-color: inherit;
   cursor: pointer;
   color: white;
   align-self: right;
+}
+
+.btnl:hover {
+  color: #f6721a;
+}
+
+#hostdet,
+#hostbuttons {
+  display: none;
 }

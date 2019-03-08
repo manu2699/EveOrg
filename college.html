@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>EVEORG</title>
@@ -8,27 +9,117 @@
         crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/style.css" rel="stylesheet">
-    <script src="/assets/actions.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
 </head>
 
+<div class="topnav" id="myTopnav">
+    <a href="/" class="active">&#x1F4C5; EVEORG &#x1F38A; </a>
+    <a href="/">&#x1F3E1; HOME</a>
+    <a href="/college.html">HOST EVENT</a>
+    <div class="topnav-right" id="adding">
+        <!--<button class="btnl" id="sign" onclick="Si()" display = "none">Student Login</button>-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
+    </div>
+
+</div>
+
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="/" class="active">&#x1F4C5; EVEORG &#x1F38A; </a>
-        <a href="/">&#x1F3E1; HOME</a>
-        <a href="/college.html">HOST EVENT</a>
-        <div class="topnav-right">
-            <button class="btnl" id="sign" onclick="Si()">Student Login</button>
-            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
-    </div>
+
+    <div id="bd">
+
+        <div class="row">
+            <br>
+            <div class="col m6" id="login">
+                College ID : <input id="cuser" type="text"><br>
+                Password : <input id="pass" type="password"><br>
+                <button type="submit" onclick="clogin()" class="btn-lblue">Sing In</button>
+                <button type="button" onclick="csignup()" class="btn-lblue">New College? Sign UP</button>
+            </div>
+        </div>
+
+        <div id="msg">
+        </div>
+
+        <div id="det">
+        </div>
+        <div class="clearfix"></div>
+        <div id="hostdet" class="row">
+            <br>
+            <div class="col m6">
+                EVENT NAME : <input id="eventname" type="text"><br>
+                EVENT TYPE :<br>
+                <select id="eventtype" class="browser-default">
+                    <option value="SYMPOSIUM" disabled selected>please select</option>
+                    <option value="SYMPOSIUM">SYMPOSIUMs</option>
+                    <option value="PROJECT EXPO">PROJECT EXPO</option>
+                </select>
+                <br>
+                EVENT WEBSITE LINK : <input id="eventsite" type="text"><br>
+            </div>
+
+            <div class="col m6">
+
+                PICK A DATE FOR EVENT:
+                <input id="edate" type="date" class="datepicker" />
+                <br>
+                DO YOU WANT US TO MANAGE REGISTRATIONS ?
+                <select id="reg" class="browser-default">
+                    <option value="NO" disabled selected>please select either yes or no</option>
+                    <option value="YES">YES</option>
+                    <option value="NO">NO</option>
+                </select>
+                <br>
+                DO YOU WANT US TO MANAGE JUDGEMENT FACILITIES FOR PAPER PRESENTATIONS OR PROJECT EXPOS ?
+                <select id="judge" class="browser-default">
+                    <option value="NO" disabled selected>please select either yes or no</option>
+                    <option value="YES">YES</option>
+                    <option value="NO">NO</option>
+                </select>
+                <br>
+            </div>
+
+            <div>
+                EVENT DESCRIPTIOIN : <input id="eventdesc" type="text"><br>
+            </div>
+
+            <div class="row">
+
+                <div class="col m6">
+                    SUBEVENT 1 NAME :
+                    <input id="subevent1" type="text"><br>
+                </div>
+
+                <div class="col m6">
+                    NEEDED FACILITIES FOR SUBEVENT 1:
+                    <select id="subevef1" class="browser-default">
+                        <option value="NONE" disabled selected>please choose</option>
+                        <option value="BOTH">BOTH REGISTRATIONS AND JUDGEMENT</option>
+                        <option value="REG">REGISTRATIONS</option>
+                        <option value="JUD">JUDGEMENT</option>
+                        <option value="NONE">NONE</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row" id="hostbuttons">
+
+            <div class="col m6">
+                <button class="btn-lblue" id="addSubEvents" onclick="addSubEvents()">ADD MORE SUB-EVENTS</button>
+                <button class="btn-lblue" id="finalize" onclick="finalize()">FINALIZE</button>
+            </div>
+
+        </div>
 
     </div>
-    <div id="msg">
 
-    </div>
-    <div class="card-grid" id="eventsview">
-
-    </div>
 </body>
-<script src="/assets/script.js"></script>
+<script src="/assets/cscript.js"></script>
 
 </html>
