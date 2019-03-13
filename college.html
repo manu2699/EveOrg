@@ -17,9 +17,8 @@
 </head>
 
 <div class="topnav" id="myTopnav">
-    <a href="/" class="active">&#x1F4C5; EVEORG &#x1F38A; </a>
-    <a href="/">&#x1F3E1; HOME</a>
-    <a href="/college.html">HOST EVENT</a>
+    <a href="/" class="active">&#x1F4C5; EVEORG </a>
+    <!--<a onclick="So()">LOGOUT</a>-->
     <div class="topnav-right" id="adding">
         <!--<button class="btnl" id="sign" onclick="Si()" display = "none">Student Login</button>-->
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
@@ -34,28 +33,45 @@
         <div class="row">
             <br>
             <div class="col m6" id="login">
-                College ID : <input id="cuser" type="text"><br>
-                Password : <input id="pass" type="password"><br>
-                <button type="submit" onclick="clogin()" class="btn-lblue">Sing In</button>
-                <button type="button" onclick="csignup()" class="btn-lblue">New College? Sign UP</button>
+                <i class="fa fa-user" aria-hidden="true"></i> College ID : <input id="cuser" type="text"><br>
+                <i class="fa fa-key" aria-hidden="true"></i> Password : <input id="pass" type="password"><br>
+                <button type="submit" onclick="clogin()" class="btn-lblue">Sing In <i class="fas fa-fingerprint"></i></button>
+                <button type="button" onclick="csignup()" class="btn-lblue">New College? Sign UP <i class="fa fa-user-plus" aria-hidden="true"></i></button>
             </div>
         </div>
-
         <div id="msg">
         </div>
-
+        <div class="clearfix"></div>
         <div id="det">
+        </div>
+        <div class="clearfix"></div>
+        <div id="todisplay">
+            
         </div>
         <div class="clearfix"></div>
         <div id="hostdet" class="row">
             <br>
             <div class="col m6">
-                EVENT NAME : <input id="eventname" type="text"><br>
+                EVENT NAME : <input id="eventname" type="text" placeholder="Event name should not contain any special characters"><br>
                 EVENT TYPE :<br>
                 <select id="eventtype" class="browser-default">
                     <option value="SYMPOSIUM" disabled selected>please select</option>
                     <option value="SYMPOSIUM">SYMPOSIUMs</option>
                     <option value="PROJECT EXPO">PROJECT EXPO</option>
+                </select>
+                <br>
+                DEPARTMENT ASSOCIATED :<br>
+                <select id="edept" class="browser-default">
+                    <option value="SYMPOSIUM" disabled selected>please select</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CSE">CSE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="AERO">AERO</option>
+                    <option value="MANAGEMENT">MANAGEMENT</option>
+                    <option value="IT">IT</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="SCIENCE & HUMANITIES">SCIENCE & HUMANITIES</option>
                 </select>
                 <br>
                 EVENT WEBSITE LINK : <input id="eventsite" type="text"><br>
@@ -83,7 +99,7 @@
             </div>
 
             <div>
-                EVENT DESCRIPTIOIN : <input id="eventdesc" type="text"><br>
+                EVENT DESCRIPTIOIN : <input id="desc" type="text"><br>
             </div>
 
             <div class="row">
@@ -112,14 +128,15 @@
 
             <div class="col m6">
                 <button class="btn-lblue" id="addSubEvents" onclick="addSubEvents()">ADD MORE SUB-EVENTS</button>
-                <button class="btn-lblue" id="finalize" onclick="finalize()">FINALIZE</button>
+                <button class="btn-lblue" id="finalize" onclick="finalize()">FINALIZE &#x1F4C5;</button>
             </div>
 
         </div>
-
+        <div class="clearfix"></div>
+        <div id = "results"></div>
+        <div class="clearfix"></div>
     </div>
 
 </body>
 <script src="/assets/cscript.js"></script>
-
 </html>

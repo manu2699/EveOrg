@@ -218,6 +218,6 @@ body {
 }
 
 #hostdet,
-#hostbuttons {
+#hostbuttons, #stuprofile, #results {
   display: none;
 }

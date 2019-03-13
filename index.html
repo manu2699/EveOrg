@@ -18,39 +18,82 @@
 
 <body>
     <div class="topnav" id="myTopnav">
-        <a href="/" class="active">&#x1F4C5; EVEORG &#x1F38A; </a>
-        <a href="/">&#x1F3E1; HOME</a>
-        <a href="/college.html">HOST EVENT</a>
+        <a id="home" class="active" onclick="homeview()">&#x1F4C5; EVEORG </a>
+        <a href="/college.html">COLLEGE LOGIN</a>
         <a id="sign" onclick="Si()">STUDENT LOGIN</a>
         <div class="topnav-right">
-            <div id = "hide">
+            <div id="hide">
             </div>
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="expand()">&#9776;</a>
         </div>
     </div>
     <br>
     <div id="bd">
+        <div id="homeview">
+            <div class="row">
+                <div class = "col m9">
+                    <input id='search' type='text' placeholder='Search by college or events' onkeypress="Search()"/>
+                    <!--<input id='search' type='text' placeholder='Search by college or events'/>-->
+                </div>
+                <div class = "col m3">
+                    <button class = "btn-lblue" onclick="Search()">SEARCH &#x1F9D0;</button>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col m3">
+                    <label>Pick A Date</label>
+                    <input id = "date" type="date" class="datepicker" />
+                </div>
 
-        <div class="row">
-            <div class="col m3">
-                <label>Pick A Date</label>
-                <input type="date" class="datepicker" />
+                <div class="col m3">
+                    <label>Select a Department</label>
+                    <select id="dept" class="browser-default">
+                        <option value="" disabled selected>please select</option>
+                        <option value="ECE">ECE</option>
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="MECH">MECH</option>
+                        <option value="AERO">AERO</option>
+                        <option value="MANAGEMENT">MANAGEMENT</option>
+                        <option value="IT">IT</option>
+                        <option value="CIVIL">CIVIL</option>
+                        <option value="SCIENCE & HUMANITIES">SCIENCE & HUMANITIES</option>
+                    </select>
+                </div>
+
+                <div class="col m3">
+                    <label>Select a City</label>
+                    <select id="city" class="browser-default">
+                        <option value="" disabled selected>please select</option>
+                        <option value="CHENNAI">CHENNAI</option>
+                        <option value="MUMBAI">MUMBAI</option>
+                        <option value="KOLKATTA">KOLKATTA</option>
+                        <option value="DELHI">DELHI</option>
+                    </select>
+                </div>
+                <div class = "col m3">
+                    <button class = "btn-lblue" onclick="Find()">Find  &#x1F9D0;</button>
+                </div>
+            </div>
+            <div id = "results">
+                Search Results 
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div id="msg">
             </div>
 
-            <div class="col m3">
-                <label>Pick A Date</label>
-                <select class="browser-default">
-                    <option>1</option>
-                    <option>1</option>
-                </select>
+            <div class="card-grid" id="eventsview">
             </div>
-
         </div>
+        <div id="stuview">
+            <div id="stuprofile">
 
-        <div id="msg">
-        </div>
-
-        <div class="card-grid" id="eventsview">
+            </div>
+            <div id = "judgement">
+                
+            </div>
         </div>
     </div>
 </body>
